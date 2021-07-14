@@ -3,7 +3,7 @@ With the value of bitcoin fluctuating so much, even on the whim of a few influen
 **Disclaimer: This project is intended as parody on the fluctuating bitcoin prices and should in no way be used as investment advice.**
 
 ## The project:
-Steps in the project are noted with a dash ('-'), solved problems with a [x] and current problems with a [ ]. Additional info is noted with a "->"
+Steps in the project are noted with a dot ('•'), solved problems with a [x] and current problems with a [ ]. Additional info is noted with a "->"
 
 Goal of the project is to make a Twitter bot that invests in Bitcoin based off Elon Musk's tweets. As a very rudimentary AI, the program evaluated tweets to correlate them to the bitcoin value and calculate a percentage to buy/sell and sell/buy an hour later every time a new tweet is posted.
 
