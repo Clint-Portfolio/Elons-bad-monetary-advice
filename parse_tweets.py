@@ -87,11 +87,12 @@ bitstamp_dict = {int(x.split(',', 1)[0]): x.split(',', 3)[3].split(',') for x in
 
 # tweet_list = parse_tweets()
 # weightdict = add_weights_to_list(tweet_list, bitstamp_dict)
-iterations_alltweets = {"Including 2017": True, "Excluding 2017": False}
-iterations_start = {"open": 0, "close": 3}
-iterations_end = {"open": 0, "close": 3}
-iterations_hour = {"No hour": False, "Add hour": True}
+# iterations_alltweets = {"Including 2017": True, "Excluding 2017": False}
+# iterations_start = {"open": 0, "close": 3}
+# iterations_end = {"open": 0, "close": 3}
+# iterations_hour = {"No hour": False, "Add hour": True}
 
+"""
 fun_words = ["Bitcoin", "bitcoin", "Elon Musk", "To the moon!", "Dogecoin",
              "Cryptocurrency", "SpaceX", "In retrospect, it was inevitable"]
 
@@ -113,6 +114,8 @@ for alltweets in iterations_alltweets.keys():
                 print(f"Testword: {weight_value(testword, weight_dict)}")
                 print(f"\n\n", flush=True)
 """
+
+
 fun_words = ["Bitcoin", "bitcoin", "Elon Musk", "To the moon!", "Dogecoin",
              "Cryptocurrency", "SpaceX", "In retrospect, it was inevitable"]
 testword = ""
@@ -121,7 +124,7 @@ frequency_list = [82, 15, 28, 43, 13, 22, 2, 61, 70, 2, 8, 40, 24, 67, 75, 19, 1
 for letterindex in range(0, len(string.ascii_lowercase)):
     testword = testword + string.ascii_lowercase[letterindex] * frequency_list[letterindex]
 tweet_list = parse_tweets(True)
-weightdict = add_weights_to_list(tweet_list, bitstamp_dict, 3, 0, True)
+weightdict = add_weights_to_list(tweet_list, bitstamp_dict, 0, 0, True)
 weightdict = adjust_weights(weightdict, len(tweet_list))
 
 output_file = open("output_weight.txt", 'w')
@@ -137,4 +140,3 @@ print(f"\n\n", flush=True)
 while True:
     inputword = input("> ")
     print(weight_value(inputword, weightdict))
-"""
