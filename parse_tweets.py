@@ -46,7 +46,8 @@ def find_btcbalance(unix_timestamp, bitstamp_dict, start, end, hourshift):
     if hourshift:
         unix_timestamp += 3600
     finalvalue = bitstamp_dict[unix_timestamp][end]
-    return(100 * float(finalvalue) / float(beginvalue) - 100)
+    difference = 100 * ((float(finalvalue) - float(beginvalue)) / float(beginvalue))
+    return(difference)
 
 
 def adjust_weights(weightdict, number_of_tweets):
@@ -59,7 +60,7 @@ def add_weights_to_list(tweet_list, bitstamp_dict, start, end, hourshift):
     weightdict = alphaweight.initialize_weightdict()
     weightkeys = weightdict.keys()
     timestamps = bitstamp_dict.keys()
-    biggest_tweet = 0
+    # biggest_tweet = 0
     for tweet in tweet_list:
         if tweet[0] in timestamps and tweet[0] + 3600 in timestamps:
             btcdifference = find_btcbalance(tweet[0], bitstamp_dict, start, end, hourshift)
