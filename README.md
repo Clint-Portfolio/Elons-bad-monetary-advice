@@ -5,6 +5,8 @@ With the value of bitcoin fluctuating so much, even on the whim of a few influen
 ## The project:
 Steps in the project are noted with a dash ('-'), solved problems with a [x] and current problems with a [ ]. Additional info is noted with a "->"
 
+Goal of the project is to make a Twitter bot that invests in Bitcoin based off Elon Musk's tweets. As a very rudimentary AI, the program evaluated tweets to correlate them to the bitcoin value and calculate a percentage to buy/sell and sell/buy an hour later every time a new tweet is posted.
+
 ### 1) Find a decent dataset of Elon Musk tweets and Bitcoin Prices
 - The dataset of Elon Musk was obtained by the webscrape of residentmario on Kaggle: https://www.kaggle.com/residentmario/exploring-elon-musk-tweets
 - Bitcoin Prices was found on https://www.CryptoDataDownload.com and based off the 1h Binance USDT/BTC timestamps
@@ -54,7 +56,11 @@ Steps in the project are noted with a dash ('-'), solved problems with a [x] and
 
     -> Why the letter occurrence percentages do not add up to 100% is unknown
 
-- [x] 
+- [x] The decision is made to use the 'Including, open, open variant' to continue
 
 
 ### 3) Create twitter bot to read and ""Invest"" bitcoin
+
+- [ ] Get familiar with the Twitter API
+
+- [ ] Get familiar with an exchange API to request the bitcoin value
